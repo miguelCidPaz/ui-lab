@@ -13,13 +13,31 @@ No gestiona datos reales ni flujo de navegación completo. No tiene lógica de S
 ### 🧩 ¿Cómo funciona?
 
 Para utilizarlo, solo tienes que registrar tus componentes en el archivo `config/content.js`, asignándoles:
-- un nombre identificativo
-- una categoría (ej: Buttons, Layouts…)
-- los props que quieres que reciba
+
+- un nombre identificativo  
+- una categoría (ej: Buttons, Layouts…)  
+- los props que quieres que reciba  
 - su estado actual (en desarrollo, finalizado, etc.)
 
-Una vez definidos, el catálogo los mostrará automáticamente en la interfaz, permitiéndote navegar entre ellos y ver su resultado al vuelo.  
-Puedes agruparlos, anidar contenidos o montar varios proyectos dentro del mismo catálogo sin conflictos.
+Una vez definidos, el catálogo los mostrará automáticamente en la interfaz, permitiéndote navegar entre ellos y ver su resultado al vuelo.
+
+Puedes:
+
+- Agrupar componentes por categoría  
+- Anidar contenidos dentro de un componente principal  
+- Montar varios proyectos distintos dentro del mismo catálogo sin conflictos  
+
+Por defecto, los componentes de prueba se encuentran en la carpeta `ProyectoEjemplo`.
+
+Para usarlo con tu código:
+
+- Sustituye `ProyectoEjemplo` por el nombre de tu proyecto  
+- Coloca dentro tus componentes reales  
+- Mockea los props que usarías en contexto real  
+- Si necesitas funciones auxiliares, mocks o constantes, crea tus propias carpetas dentro sin tocar la estructura del catálogo  
+
+Este sistema no impone reglas sobre cómo deben funcionar tus componentes ni qué arquitectura seguir:  
+te deja cargarlos como quieras, desacoplados y a tu ritmo.
 
 ---
 
