@@ -47,6 +47,17 @@ El catálogo no se acopla a ningún framework específico: tú decides cómo int
 
 ---
 
+### 🧪 Test de estabilidad
+
+Se incluye un test de humo (`test/CatalogSmokeTest.test.jsx`) que recorre todos los componentes registrados y comprueba que se renderizan correctamente con los props definidos.
+
+Esto ayuda a detectar errores básicos de renderizado o props mal configurados sin necesidad de escribir tests individuales.
+
+Puedes ejecutarlo con:
+
+```bash
+npm test
+
 ### 📄 Licencia
 
 Este proyecto se distribuye bajo la licencia [Apache 2.0](./LICENSE).  

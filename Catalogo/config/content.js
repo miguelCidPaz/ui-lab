@@ -17,7 +17,7 @@ export const ALL_COMPONENTS = [
     {
         name: "HOME",
         type: "Pagina inicial",
-        state: STATES.completed,
+        state: STATES.medium,
         category: CATEGORIES.pages,
         full:true,
         component: Button,
@@ -30,7 +30,7 @@ export const ALL_COMPONENTS = [
     {
         name: "ultralto",
         type: "ultralto",
-        state: STATES.completed,
+        state: STATES.starter,
         category: CATEGORIES.modules,
         component: Elementoultraalto,
         props: "",
