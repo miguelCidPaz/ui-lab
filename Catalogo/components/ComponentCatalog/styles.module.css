@@ -1,0 +1,15 @@
+.background_catalog_component{
+    display: flex;
+    gap: 10em;
+    flex-direction: column;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;     /* Centra verticalmente */          
+}
+
+.background_catalog_container{
+    width: 100%;
+}
+
+.background_catalog_description{
+    width: 80%;
+}
