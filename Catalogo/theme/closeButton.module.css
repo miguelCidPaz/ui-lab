@@ -1,0 +1,10 @@
+.closeButton{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    background-color: var(--ui-catalog-base-color);
+    color: var(--ui-catalog-text-color);
+    border: none;
+    cursor: pointer;
+}

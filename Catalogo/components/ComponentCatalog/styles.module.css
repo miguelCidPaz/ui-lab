@@ -1,0 +1,56 @@
+.background_catalog_component {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centra hijos horizontalmente */
+    gap: 3em;
+    padding: 4em 2em;
+    background-color: var(--ui-catalog-background);
+}
+
+.background_catalog_container {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.background_catalog_description {
+    width: 100%;
+    max-width: 1000px;
+    font-family: var(--ui-catalog-font-base);
+    background-color: var(--ui-catalog-base-color);
+    /* un azul más suave que el fondo base */
+    color: var(--ui-catalog-text-color);
+    border-radius: 10px;
+    padding: 2em;
+    line-height: 1.6;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.background_catalog_description p {
+    margin: 0.5em 0;
+    font-size: 1rem;
+}
+
+.section {
+    margin-top: 1.5em;
+}
+
+.sectionTitle {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 0.5em;
+    color: #93c5fd;
+    /* azul clarito para destacar secciones */
+}
+
+.code_reference {
+    font-family: var(--ui-catalog-font-code);
+    background-color: #0f172a;
+    color: #f1f5f9;
+    padding: 1em;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-size: 0.9rem;
+    white-space: pre-wrap;
+    word-break: break-word;
+}

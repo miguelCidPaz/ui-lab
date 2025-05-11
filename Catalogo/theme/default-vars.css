@@ -1,0 +1,9 @@
+:root {
+    --ui-catalog-base-color: #0f172a;
+    --ui-catalog-text-color: #f1f5f9;
+    --ui-catalog-buttons-color: #1e40af;
+    --ui-catalog-buttons-hover-color: #1d4ed8;
+
+    --ui-catalog-font-base: 'Inter', sans-serif;
+    --ui-catalog-font-code: 'Fira Code', monospace;
+}
