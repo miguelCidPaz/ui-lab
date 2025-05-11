@@ -21,7 +21,7 @@ export const ComponentCatalog = ({ componentData }) => {
   }
 
   return (
-    <div className={componentData.category === 'Pages'
+    <div className={componentData.full
       ? styles.background_catalog_component_page
       : styles.background_catalog_component
     }>

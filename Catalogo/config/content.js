@@ -19,13 +19,12 @@ export const ALL_COMPONENTS = [
         type: "Pagina inicial",
         state: STATES.completed,
         category: CATEGORIES.pages,
+        full:true,
         component: Button,
         props: "",
-        endpoint: {
-            status: "provisional",
-            direction: "",
-            objeto: "",
-        },
+        endpoint: "http://localhost:5173/componentes/pruebaComponente", 
+        methodHttp: "GET", // Aqui definimos el metodo HTTP que queremos usar, si no lo usamos lo dejamos vacio
+
         useIn: [""]
     },
     {
@@ -35,11 +34,7 @@ export const ALL_COMPONENTS = [
         category: CATEGORIES.modules,
         component: Elementoultraalto,
         props: "",
-        endpoint: {
-            status: "provisional",
-            direction: "",
-            objeto: "",
-        },
+        endpoint: "http://localhost:5173/componentes/pruebaComponente", 
         useIn: [""]
     }
 

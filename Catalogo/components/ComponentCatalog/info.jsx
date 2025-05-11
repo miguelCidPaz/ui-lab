@@ -1,8 +1,6 @@
 import styles from './styles.module.css';
 
 export const Info = ({ data }) => {
-    console.log(data);
-
 
     if (data === null || data === undefined) {
         return <div>cargando...</div>

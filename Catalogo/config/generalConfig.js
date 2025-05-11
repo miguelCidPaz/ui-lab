@@ -7,8 +7,13 @@ export const BASENAME = Object.freeze('ui-lab'); // Nombre base del catalogo, pu
 /**
  * @description
  * Modo de navegación para el catálogo.
+ * Opciones disponibles: 'history' | 'next' | 'react-router'
+ * Este catálogo usa por defecto 'history' por su sencillez y compatibilidad universal.
+ * Si necesitas integrarlo con Next.js o React Router, puedes hacerlo sin problema.
+ * La lógica de navegación ya está centralizada a través de 'navigateTo', solo debes adaptarla a tu entorno.
+ * Este espacio está pensado como entorno aislado para testeo visual, no como app completa.
  */
-export const NAVIGATION_MODE = 'history'; // 'next' | 'react-router' | 'history'
+export const NAVIGATION_MODE = 'history';
 
 
 /**
