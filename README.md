@@ -58,6 +58,10 @@ Puedes ejecutarlo con:
 ```bash
 npm test
 ```
+o
+```bash
+npx vitest run
+```
 
 ### 📄 Licencia
 
