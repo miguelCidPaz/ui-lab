@@ -12,16 +12,23 @@ const OptionCatalog = ({ component, navigate }) => {
     const borderColor = { borderColor: component.state.color };
 
     return (
-        <div className={styles.option_body_catalog} style={{ ...borderColor }}>
-            <p className={styles.option_title} style={borderColor}>
+        <div className={styles.option_body_catalog}>
+            <p className={styles.option_title}>
                 {component.name}
             </p>
-            <p className={styles.option_type} style={borderColor}>
+            <p className={styles.option_type}>
                 {component.type}
             </p>
-            <div className={styles.option_state} style={borderColor}>
-                {component.state.text}
+            <div className={styles.option_state_wrapper}>
+                <p className={styles.option_state}>
+                    {component.state.label}
+                </p>
+                <div
+                    className={styles.option_marker}
+                    style={{ '--background-color-option': borderColor.borderColor }}
+                ></div>
             </div>
+
             <button className={styles.option_button} onClick={goComponent}>
                 Ir a elemento
             </button>

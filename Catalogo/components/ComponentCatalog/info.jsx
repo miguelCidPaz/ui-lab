@@ -1,4 +1,6 @@
 export const Info = ({data}) => {
+    console.log(data);
+    
     
     if(data === null || data === undefined){
         return <div>cargando...</div>

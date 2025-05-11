@@ -3,7 +3,7 @@ import { ALL_COMPONENTS } from '../../config/content';
 import { CATEGORIES } from '../../config/generalConfig';
 import { Info } from './info';
 import styles from './styles.module.css';
-import { useRouteListener } from '../../utils/useRouteListener';
+import { useRouteListener } from '../../utils/hooks/useRouteListener';
 
 export const ComponentCatalog = () => {
     const [componentData, setComponentData] = useState(null);

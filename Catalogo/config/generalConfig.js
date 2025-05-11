@@ -16,10 +16,10 @@ export const NAVIGATION_MODE = 'history'; // 'next' | 'react-router' | 'history'
  * Colores basicos para los componentes base del catalogo, puedes cambiarlos como quieras.
  */
 export const BASECOLORS = Object.freeze({
-  ui_catalog_base_color:'#0f172a',   
-  ui_catalog_text_color: '#f1f5f9',  
-  ui_catalog_buttons_color: '#1e40af', 
-  ui_catalog_buttons_hover_color:'#1d4ed8'
+  ui_catalog_base_color: '#0f172a',
+  ui_catalog_text_color: '#f1f5f9',
+  ui_catalog_buttons_color: '#1e40af',
+  ui_catalog_buttons_hover_color: '#1d4ed8'
 });
 
 /**
@@ -30,15 +30,15 @@ export const BASECOLORS = Object.freeze({
 export const STATES = Object.freeze({
   starter: {
     label: 'En desarrollo',
-    color: '#22c55e'
+    color: '#e53935' // Rojo colorao con garra, pero no neón.
   },
   medium: {
     label: 'En revisión',
-    color: '#f59e0b'
+    color: '#fb8c00' // Naranja vibrante, pero no te deja ciego.
   },
   completed: {
     label: 'Finalizado',
-    color: '#ef4444'
+    color: '#43a047' // Verde calmado, de esos que dan paz interior.
   }
 });
 

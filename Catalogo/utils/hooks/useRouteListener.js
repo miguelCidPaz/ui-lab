@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { NAVIGATION_MODE } from '../config/generalConfig';
+import { NAVIGATION_MODE } from '../../config/generalConfig.js';
 
 /**
  * Hook para escuchar cambios en la URL (solo si estamos en modo "history").
