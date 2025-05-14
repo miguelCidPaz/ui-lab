@@ -1,0 +1,64 @@
+.page_wrapper {
+  max-width: 960px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background-color: #f9fafb;
+  border-radius: 20px;
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  transition: all 0.2s ease;
+}
+
+.page_title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+  text-align: center;
+}
+
+.modules_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: stretch; /* 🎯 esta línea es la clave */
+}
+
+
+@media (min-width: 768px) {
+  .modules_container {
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+  }
+}
+
+.panel_contador,
+.panel_emoji {
+  background-color: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  min-height: 300px; /* Fuerza igual altura */
+}
+
+.span_emoji {
+  font-size: 3rem;
+  line-height: 1;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+
+
+.panel_contador:hover,
+.panel_emoji:hover {
+  transform: translateY(-3px);
+}

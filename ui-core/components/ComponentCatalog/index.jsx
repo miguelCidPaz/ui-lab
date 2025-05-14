@@ -33,17 +33,17 @@ export const ComponentCatalog = ({ componentData }) => {
             {componentData.content.map((e, i) => (
               <e.component key={i} data={e.props} />
             ))}
-          </componentData.component>
+          </componentData.component >
         ) : (
           <componentData.component data={componentData.props} />
         )}
       </div>
 
-      {componentData.category !== 'Layouts' && (
+      {!componentData.isPage ? (
         <div className={`${styles.background_catalog_container} ${styles.background_catalog_description}`}>
           <Info data={componentData} />
         </div>
-      )}
+      ) : null}
     </div>
   );
 };

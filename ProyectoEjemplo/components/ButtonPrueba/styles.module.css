@@ -1,0 +1,27 @@
+.btn {
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.25rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  box-shadow: 0 4px 8px rgba(0, 112, 243, 0.2);
+  outline: none;
+}
+
+.btn:hover {
+  background-color: #0059c1;
+}
+
+.btn:active {
+  transform: scale(0.97);
+  background-color: #004aad;
+}
+
+.btn:focus-visible {
+  outline: 2px solid #90cdf4;
+  outline-offset: 2px;
+}
