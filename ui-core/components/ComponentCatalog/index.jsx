@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Info } from './info';
 import styles from './styles.module.css';
+import { NotFoundCatalog } from '../NotFoundCatalog';
 
 
 export const ComponentCatalog = ({ componentData }) => {
@@ -17,7 +18,8 @@ export const ComponentCatalog = ({ componentData }) => {
   }, []);
 
   if (!componentData) {
-    return <div className={styles.not_found}>Componente no encontrado</div>;
+    // Con la navegacion de la en history es imposible llegar aqui, lo dejo por si a futuro quiere implementarse para next y react-router
+    return <NotFoundCatalog />; 
   }
 
   return (

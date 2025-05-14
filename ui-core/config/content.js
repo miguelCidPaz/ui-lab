@@ -2,6 +2,9 @@ import Button from '../../ProyectoEjemplo/components/button.jsx' // Aqui importa
 import { Elementoultraalto } from '../../ProyectoEjemplo/modules/Elementoultraalto.jsx'
 import { CATEGORIES, STATES } from './generalConfig.js'
 
+/**
+ * Agrega aqui los componentes que quieres usar en UI-LAB
+ */
 export const ALL_COMPONENTS = [
     {
         name: "Catalogo de Botones", // Nombre del componente

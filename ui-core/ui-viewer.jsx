@@ -1,4 +1,4 @@
-import { HeaderCatalog } from './components/HeaderCatalog';
+import { HeaderCatalog } from './components/HeaderCatalog/index.jsx';
 import { ComponentCatalog } from './components/ComponentCatalog/index.jsx';
 import { applyBaseColors } from './theme/applyBaseColors.js';
 import { BASECOLORS, CATEGORIES } from './config/generalConfig.js';
