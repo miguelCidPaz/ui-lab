@@ -1,6 +1,6 @@
 import styles from './styles.module.css';
 
-export const EmojiDisplay = ({ data: { emoji, className } }) => {
+export const EmojiDisplay = ({ emoji, className }) => {
     const emojiMap = ['😐', '🙂', '😃', '😁', '🤩', '🚀'];
 
     const getEmoji = (value) => {

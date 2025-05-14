@@ -70,7 +70,7 @@ export const ALL_COMPONENTS = [
         state: STATES.medium,
         category: CATEGORIES.modules,
         component: PanelOperaciones,
-        props: "",
+        props: {},
         endpoint: "-", 
         methodHttp: "-", // Aqui definimos el metodo HTTP que queremos usar, si no lo usamos lo dejamos vacio
 
@@ -83,7 +83,7 @@ export const ALL_COMPONENTS = [
         category: CATEGORIES.pages,
         isPage: true,
         component: PageEjemplo,
-        props: "",
+        props: {},
         endpoint: "-", 
         methodHttp: "-", // Aqui definimos el metodo HTTP que queremos usar, si no lo usamos lo dejamos vacio
 

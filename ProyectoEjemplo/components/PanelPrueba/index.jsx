@@ -1,6 +1,6 @@
 import styles from './styles.module.css';
 
-export const PanelPrueba = ({ data: { numb, label, className } }) => {
+export const PanelPrueba = ({ numb, label, className }) => {
 
     return (
         <div className={`${styles.background_panel} ${className}`}>

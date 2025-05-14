@@ -29,13 +29,13 @@ export const ComponentCatalog = ({ componentData }) => {
     }>
       <div className={styles.background_catalog_container}>
         {componentData.content ? (
-          <componentData.component data={componentData.props}>
+          <componentData.component {...componentData.props}>
             {componentData.content.map((e, i) => (
-              <e.component key={i} data={e.props} />
+              <e.component key={i} {...e.props} />
             ))}
           </componentData.component >
         ) : (
-          <componentData.component data={componentData.props} />
+          <componentData.component {...componentData.props} />
         )}
       </div>
 

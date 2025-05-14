@@ -1,75 +1,85 @@
 # UI Lab – Catálogo de Componentes React
 
-Este proyecto es un catálogo de componentes React pensado como entorno de trabajo ligero, limpio y desacoplado. 
+**UI Lab** es un entorno ligero, limpio y desacoplado para visualizar, probar y documentar tus componentes React.
 
-Su objetivo es permitir a cualquier desarrollador visualizar, probar y documentar sus componentes de forma rápida, sin necesidad de montar una app real ni depender de frameworks externos.
+Funciona como un *sandbox visual* que te permite trabajar directamente con componentes sin necesidad de montar una app real, sin lógica de navegación compleja y sin dependencias externas.
 
-Funciona como una especie de "sandbox visual", donde puedes navegar entre componentes, ver cómo se renderizan con sus props, y validar su apariencia y comportamiento. Es útil tanto para elementos simples (como botones o inputs) como para agrupaciones más complejas o layouts enteros.
+Es útil tanto para piezas atómicas (como botones o inputs) como para estructuras más complejas (módulos, layouts, páginas…).
 
-No gestiona datos reales ni flujo de navegación completo. No tiene lógica de SSR ni espera que montes una arquitectura de páginas. El foco está en trabajar con componentes de forma directa, usando los datos que tú definas, en un entorno controlado.
+> El foco está en **ver tus componentes en acción**, con los props que tú decidas, de forma rápida y controlada.
 
 ---
 
-### 🧩 ¿Cómo funciona?
+## 🧩 ¿Cómo funciona?
 
-Para utilizarlo, solo tienes que registrar tus componentes en el archivo `config/content.js`, asignándoles:
+Solo tienes que registrar tus componentes en `config/content.js`, asignándoles:
 
-- un nombre identificativo  
-- una categoría (ej: Buttons, Layouts…)  
-- los props que quieres que reciba  
-- su estado actual (en desarrollo, finalizado, etc.)
+- Un nombre identificativo  
+- Una categoría (ej. Buttons, Layouts…)  
+- Las props que recibe  
+- Su estado actual (`starter`, `in progress`, `completed`, etc.)
 
-Una vez definidos, el catálogo los mostrará automáticamente en la interfaz, permitiéndote navegar entre ellos y ver su resultado al vuelo.
+Una vez hecho esto, UI Lab los mostrará automáticamente en la interfaz.  
+Podrás navegar entre ellos, ver cómo se renderizan y validar su comportamiento al vuelo.
 
-Puedes:
+También puedes:
 
 - Agrupar componentes por categoría  
-- Anidar contenidos dentro de un componente principal  
-- Montar varios proyectos distintos dentro del mismo catálogo sin conflictos  
+- Anidar componentes dentro de otros  
+- Registrar varios proyectos independientes sin conflictos  
 
-Por defecto, los componentes de prueba se encuentran en la carpeta `ProyectoEjemplo`.
-
-Para usarlo con tu código:
-
-- Sustituye `ProyectoEjemplo` por el nombre de tu proyecto  
-- Coloca dentro tus componentes reales  
-- Mockea los props que usarías en contexto real  
-- Si necesitas funciones auxiliares, mocks o constantes, crea tus propias carpetas dentro sin tocar la estructura del catálogo  
-
-Este sistema no impone reglas sobre cómo deben funcionar tus componentes ni qué arquitectura seguir:  
-te deja cargarlos como quieras, desacoplados y a tu ritmo.
+Los componentes de prueba incluidos están en la carpeta `ProyectoEjemplo`.
 
 ---
 
-### ⚙️ Personalización
+## 🛠️ Integración con tus propios componentes
 
-El archivo `config/generalConfig.js` te permite configurar:
+Para usar UI Lab con tu código real:
 
-- Las categorías disponibles
-- Los colores base de la interfaz
-- Las fuentes usadas para texto y bloques de código
-- Las etiquetas de estado de los componentes
-- Y el modo de navegación (`'history'`, `'next'`, `'react-router'`)
+1. Sustituye `ProyectoEjemplo` por el nombre de tu proyecto
+2. Coloca tus componentes dentro  
+3. Mockea los props que usarías en contexto real  
+4. Crea carpetas auxiliares para funciones, mocks o constantes si las necesitas
 
-Todo está centralizado y puede modificarse sin afectar a la lógica principal del catálogo.
-
----
-
-### 🧭 Navegación
-
-La navegación está gestionada por la función `navigateTo(path, router?)`.  
-Por defecto se usa `'history'`, que no necesita dependencias externas.  
-Si quieres integrarlo con Next.js o React Router, cambia el modo en `generalConfig.js` y adapta `navigateTo` a tu entorno.
-
-El catálogo no se acopla a ningún framework específico: tú decides cómo integrarlo.
+> UI Lab **no impone arquitectura ni estructura interna**: tú decides cómo organizar tus componentes y cómo cargarlos.
 
 ---
 
-### 🧪 Test de estabilidad
+## ⚙️ Personalización
 
-Se incluye un test de humo (`test/CatalogSmokeTest.test.jsx`) que recorre todos los componentes registrados y comprueba que se renderizan correctamente con los props definidos.
+Puedes adaptar el catálogo desde `config/generalConfig.js`:
 
-Esto ayuda a detectar errores básicos de renderizado o props mal configurados sin necesidad de escribir tests individuales.
+- Categorías disponibles  
+- Colores base de la interfaz  
+- Fuente tipográfica del código y del texto  
+- Estados de los componentes  
+- Modo de navegación: `'history'`, `'next'` o `'react-router'`  
+
+Todo está centralizado y se puede modificar sin romper nada.
+
+---
+
+## 🧭 Navegación
+
+La navegación se gestiona con `navigateTo(path, router?)`.
+
+Por defecto, UI Lab usa el modo `'history'`, que no requiere librerías externas.
+
+Si usas Next.js o React Router, solo tienes que:
+
+1. Cambiar el modo en `generalConfig.js`  
+2. Adaptar la función `navigateTo()` a tu sistema
+
+---
+
+## 🧪 Test de estabilidad
+
+El catálogo incluye un test de humo (`test/CatalogSmokeTest.test.jsx`) que:
+
+- Recorre todos los componentes registrados
+- Intenta renderizarlos con los props definidos
+
+Esto permite detectar errores básicos de render o props mal configurados sin escribir test manuales.
 
 Puedes ejecutarlo con:
 
