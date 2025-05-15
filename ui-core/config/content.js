@@ -4,7 +4,7 @@ import { PanelPrueba } from '../../ProyectoEjemplo/components/PanelPrueba/index.
 import { PanelEmoji } from '../../ProyectoEjemplo/modules/PanelEmoji/index.jsx'
 import { PanelOperaciones } from '../../ProyectoEjemplo/modules/PanelOperaciones/index.jsx'
 import { PageEjemplo } from '../../ProyectoEjemplo/pages/PageEjemplo/index.jsx'
-import { propsButtonMasSolitario, propsButtonMenosSolitario, propsPanelSolitario } from '../../ProyectoEjemplo/utils/props.js'
+import { panelOperacionesProps, propsButtonMasSolitario, propsButtonMenosSolitario, propsPanelSolitario } from '../../ProyectoEjemplo/utils/props.js'
 import { CATEGORIES, STATES } from './generalConfig.js'
 
 /**
@@ -71,6 +71,7 @@ export const ALL_COMPONENTS = [
         category: CATEGORIES.modules,
         component: PanelOperaciones,
         props: {},
+        propsNoDefinidas: panelOperacionesProps,
         endpoint: "-", 
         methodHttp: "-", // Aqui definimos el metodo HTTP que queremos usar, si no lo usamos lo dejamos vacio
 

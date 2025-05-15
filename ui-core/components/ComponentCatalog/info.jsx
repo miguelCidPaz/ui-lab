@@ -19,7 +19,7 @@ export const Info = ({ data }) => {
 
             <div className={styles.section}>
                 <p className={styles.sectionTitle}>Ejemplo JSON de respuesta</p>
-                <p className={styles.code_reference}>{JSON.stringify(data.props)}</p>
+                <p className={styles.code_reference}>{JSON.stringify(Object.keys(data.props).length === 0 ? data.propsNoDefinidas : data.props, null, 2)}</p>
             </div>
         </div>
 

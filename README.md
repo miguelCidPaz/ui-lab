@@ -1,4 +1,4 @@
-# UI Lab – Catálogo de Componentes React
+# UI Lab – Laboratorio para construir, probar y mostrar componentes React
 
 **UI Lab** es un entorno ligero, limpio y desacoplado para visualizar, probar y documentar tus componentes React.
 

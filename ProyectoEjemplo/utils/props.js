@@ -3,6 +3,7 @@ export const functionalityTest = (operation) => {
 }
 
 
-export const propsButtonMasSolitario = {onclick:functionalityTest, operation: 'sum'};
-export const propsButtonMenosSolitario = {onclick:functionalityTest, operation: 'rest'};
-export const propsPanelSolitario = {numb: 0};
+export const propsButtonMasSolitario = { onclick: functionalityTest, operation: 'sum' };
+export const propsButtonMenosSolitario = { onclick: functionalityTest, operation: 'rest' };
+export const propsPanelSolitario = { numb: 0 };
+export const panelOperacionesProps = { value: 0, setValue: () => { }, };
