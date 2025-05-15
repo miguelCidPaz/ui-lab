@@ -52,7 +52,7 @@ export const ALL_COMPONENTS = [
         component: EmojiDisplay,
         props: {emoji:0},
         endpoint: "-", 
-        useIn: [""]
+        useIn: ["Componentes - Modulos - Paginas"]
     },
     {
         name: "Panel Emoji",
@@ -62,7 +62,7 @@ export const ALL_COMPONENTS = [
         component: PanelEmoji,
         props: {value:0, classname:""},
         endpoint: "-", 
-        useIn: [""]
+        useIn: ["Modulos - Paginas"]
     },
     {
         name: "Panel Operaciones",
@@ -75,7 +75,7 @@ export const ALL_COMPONENTS = [
         endpoint: "-", 
         methodHttp: "-", // Aqui definimos el metodo HTTP que queremos usar, si no lo usamos lo dejamos vacio
 
-        useIn: [""]
+        useIn: ["Modulos - Paginas"]
     },
     {
         name: "Pagina de prueba",
@@ -88,7 +88,7 @@ export const ALL_COMPONENTS = [
         endpoint: "-", 
         methodHttp: "-", // Aqui definimos el metodo HTTP que queremos usar, si no lo usamos lo dejamos vacio
 
-        useIn: [""]
+        useIn: ["Paginas"]
     }
 
 ]

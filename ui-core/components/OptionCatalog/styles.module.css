@@ -64,3 +64,27 @@
 .option_button:hover {
     background-color: var(--ui-catalog-buttons-hover-color);
 }
+
+
+.option_usein_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.option_use {
+  background-color: var(--ui-catalog-chip-bg, #ffffff10);
+  border: 1px solid var(--ui-catalog-chip-border, #ffffff20);
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 8px;
+  color: var(--ui-catalog-text-color);
+  font-weight: 500;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+}
+
+.option_use:hover {
+  background-color: #ffffff20;
+}

@@ -27,6 +27,14 @@ const OptionCatalog = ({ component, navigate }) => {
                     className={styles.option_marker}
                     style={{ '--background-color-option': borderColor.borderColor }}
                 ></div>
+
+                <div className={styles.option_usein_wrapper}>
+                    {component.useIn.map((use, index) => (
+                        <p key={index} className={styles.option_use}>
+                            {use}
+                        </p>
+                    ))}
+                </div>
             </div>
 
             <button className={styles.option_button} onClick={goComponent}>
