@@ -10,6 +10,24 @@ Es útil tanto para piezas atómicas (como botones o inputs) como para estructur
 
 ---
 
+
+## ▶️ ¿Cómo se usa?
+
+Para arrancar UI Lab solo necesitas dos pasos:
+
+```bash
+npm install
+npm run dev
+```
+
+Esto abre la app en la url:
+```bash
+http://localhost:5173
+```
+
+---
+
+
 ## 🧩 ¿Cómo funciona?
 
 Solo tienes que registrar tus componentes en `config/content.js`, asignándoles:
