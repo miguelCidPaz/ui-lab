@@ -13,7 +13,7 @@
 }
 
 .background_catalog_description {
-    width: 100%;
+    width: 80%;
     max-width: 1000px;
     font-family: var(--ui-catalog-font-base);
     background-color: var(--ui-catalog-base-color);
@@ -23,6 +23,13 @@
     line-height: 1.6;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+
+.centered_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 .background_catalog_description p {
     margin: 0.5em 0;

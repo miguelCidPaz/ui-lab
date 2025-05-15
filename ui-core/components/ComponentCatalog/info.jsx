@@ -8,8 +8,9 @@ export const Info = ({ data }) => {
 
     return (
         <div className={styles.background_catalog_description}>
-            <p><strong>Nombre dado al componente dentro de la aplicacion:</strong> {data.name}</p>
-            <p><strong>Lugares donde se usa este componente:</strong> {data.useIn}</p>
+            <p><strong>Nombre:</strong> {data.name}</p>
+            <p><strong>Usado en:</strong> {data.useIn}</p>
+
 
             <div className={styles.section}>
                 <p className={styles.sectionTitle}>EndPoint</p>

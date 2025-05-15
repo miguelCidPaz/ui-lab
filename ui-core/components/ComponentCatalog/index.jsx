@@ -19,7 +19,7 @@ export const ComponentCatalog = ({ componentData }) => {
 
   if (!componentData) {
     // Con la navegacion de la en history es imposible llegar aqui, lo dejo por si a futuro quiere implementarse para next y react-router
-    return <NotFoundCatalog />; 
+    return <NotFoundCatalog />;
   }
 
   return (
@@ -29,13 +29,17 @@ export const ComponentCatalog = ({ componentData }) => {
     }>
       <div className={styles.background_catalog_container}>
         {componentData.content ? (
-          <componentData.component {...componentData.props}>
-            {componentData.content.map((e, i) => (
-              <e.component key={i} {...e.props} />
-            ))}
-          </componentData.component >
+          <div className={styles.centered_wrapper}>
+            <componentData.component {...componentData.props}>
+              {componentData.content.map((e, i) => (
+                <e.component key={i} {...e.props} />
+              ))}
+            </componentData.component >
+          </div>
         ) : (
-          <componentData.component {...componentData.props} />
+          <div className={styles.centered_wrapper}>
+            <componentData.component {...componentData.props} />
+          </div>
         )}
       </div>
 
