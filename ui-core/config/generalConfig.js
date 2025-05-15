@@ -69,7 +69,7 @@ export const STATES = Object.freeze({
 export const CATEGORIES = Object.freeze({
   components: 'Componentes',
   modules: 'Modulos',
-  pages: 'Pages'
+  pages: 'Paginas'
 });
 
 /**
