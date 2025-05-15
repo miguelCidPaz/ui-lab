@@ -18,18 +18,18 @@ limitations under the License.
 
 ------------------------------------------------------------------------------
 
-Este repositorio licencia únicamente el código de Catalogo,
-que puede ser utilizado para visualizar, documentar y probar componentes React
-en entornos aislados.
+Este repositorio licencia únicamente el código ubicado en la carpeta `ui-core`,
+la cual proporciona un entorno para visualizar, documentar y probar componentes React
+en entornos desacoplados.
 
-No se incluye ni se licencia ninguna lógica de negocio, flujo de navegación,
-ni estructura de aplicación real.
+No se incluye ni se licencia ninguna lógica de negocio, estructura de navegación,
+ni arquitectura de aplicación real.
 
 Puedes integrar este catálogo en tus proyectos personales o profesionales,
-modificarlo libremente, o adaptarlo a tu stack (React, Next, Vite, etc.)
+modificarlo libremente o adaptarlo a tu stack (React, Next.js, Vite, etc.),
 siempre que mantengas esta licencia.
 
-Este catálogo está diseñado para ser desacoplado, reutilizable y ligero.
-No impone dependencias ni control sobre el uso que le des a los componentes
-que cargues dentro de él.
+Este sistema está diseñado para ser reutilizable, ligero y desacoplado.
+No impone dependencias ni limita el uso de los componentes que decidas cargar en él.
+
 
