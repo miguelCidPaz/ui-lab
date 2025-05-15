@@ -2,7 +2,9 @@
 
 **UI Lab** es un entorno ligero, limpio y desacoplado para visualizar, probar y documentar tus componentes React.
 
-Funciona como un *sandbox visual* que te permite trabajar directamente con componentes sin necesidad de montar una app real, sin lógica de navegación compleja y sin dependencias externas.
+Nació como una herramienta interna para trabajar con componentes de forma rápida y controlada, sin montar una app completa ni depender de infraestructura externa.
+
+Funciona como un *sandbox visual* que te permite centrarte en tus componentes directamente, sin lógica de navegación compleja ni librerías adicionales.
 
 Es útil tanto para piezas atómicas (como botones o inputs) como para estructuras más complejas (módulos, layouts, páginas…).
 
