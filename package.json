@@ -1,13 +1,14 @@
 {
   "name": "ui-lab",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A clean React component lab you can fork, extend or embed in any project. No boilerplate, no nonsense.",
   "main": "index.jsx",
   "scripts": {
-    "dev": "vite",
+    "dev": "concurrently \"node ui-core/server/index.js\" \"vite\"",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "vitest run"
+    "test": "vitest run",
+    "postinstall": "cd ui-core/server && npm install"
   },
   "author": "miguelCidPaz",
   "license": "Apache-2.0",
@@ -18,6 +19,7 @@
   "devDependencies": {
     "@testing-library/react": "^16.3.0",
     "@vitejs/plugin-react": "^4.4.1",
+    "concurrently": "^9.1.2",
     "jsdom": "^26.1.0",
     "vite": "^5.0.0",
     "vitest": "^3.1.3"
