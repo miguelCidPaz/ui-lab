@@ -1,10 +1,20 @@
-const http = require('http');
+import http from 'http';
+//import { handleUploadJson } from './routes/uploadJson.js';
+import { syncComponents } from './scripts/syncComponents.js';
 
 const PORT = 3000;
 
+
+// Ejecutamos sincronización al levantar el backend
+syncComponents();
+
 const server = http.createServer((req, res) => {
-  res.writeHead(200, { 'Content-Type': 'text/plain' });
-  res.end('🧠 UI-LAB Internal Server is running!\n');
+  if (req.method === 'POST' && req.url === '/upload-json') {
+    //handleUploadJson(req, res);
+  } else {
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
+    res.end('🧠 UI-LAB Internal Server is running!\n');
+  }
 });
 
 server.listen(PORT, () => {

@@ -1,0 +1,105 @@
+[
+  {
+    "name": "Boton Sumar",
+    "componentName": "ButtonPrueba",
+    "componentPath": "../../Proyectos/ProyectoEjemplo/components/ButtonPrueba/index.jsx",
+    "propsName": "propsButtonMasSolitario",
+    "propsPath": "../../Proyectos/ProyectoEjemplo/utils/props.js",
+    "category": "Componentes",
+    "state": "Finalizado",
+    "stateColor": "#43a047",
+    "endpoint": "-",
+    "methodHttp": "-",
+    "useIn": [
+      "ProyectoEjemplo"
+    ]
+  },
+  {
+    "name": "Boton Restar",
+    "componentName": "ButtonPrueba",
+    "componentPath": "../../Proyectos/ProyectoEjemplo/components/ButtonPrueba/index.jsx",
+    "propsName": "propsButtonMenosSolitario",
+    "propsPath": "../../Proyectos/ProyectoEjemplo/utils/props.js",
+    "category": "Componentes",
+    "state": "Finalizado",
+    "stateColor": "#43a047",
+    "endpoint": "-",
+    "methodHttp": "-",
+    "useIn": [
+      "ProyectoEjemplo"
+    ]
+  },
+  {
+    "name": "Panel informativo",
+    "componentName": "PanelPrueba",
+    "componentPath": "../../Proyectos/ProyectoEjemplo/components/PanelPrueba/index.jsx",
+    "propsName": "propsPanelSolitario",
+    "propsPath": "../../Proyectos/ProyectoEjemplo/utils/props.js",
+    "category": "Componentes",
+    "state": "Finalizado",
+    "stateColor": "#43a047",
+    "endpoint": "-",
+    "methodHttp": "-",
+    "useIn": [
+      "ProyectoEjemplo"
+    ]
+  },
+  {
+    "name": "EmojiDisplay",
+    "componentName": "EmojiDisplay",
+    "componentPath": "../../Proyectos/ProyectoEjemplo/components/EmojiDisplay/index.jsx",
+    "propsName": "propsEmojiDisplay",
+    "propsPath": "../../Proyectos/ProyectoEjemplo/utils/props.js",
+    "category": "Componentes",
+    "state": "En desarrollo",
+    "stateColor": "#e53935",
+    "endpoint": "-",
+    "useIn": [
+      "ProyectoEjemplo"
+    ]
+  },
+  {
+    "name": "Panel Emoji",
+    "componentName": "PanelEmoji",
+    "componentPath": "../../Proyectos/ProyectoEjemplo/modules/PanelEmoji/index.jsx",
+    "propsName": "propsPanelEmoji",
+    "propsPath": "../../Proyectos/ProyectoEjemplo/utils/props.js",
+    "category": "Modulos",
+    "state": "En revisión",
+    "stateColor": "#fb8c00",
+    "endpoint": "-",
+    "useIn": [
+      "ProyectoEjemplo"
+    ]
+  },
+  {
+    "name": "Panel Operaciones",
+    "componentName": "PanelOperaciones",
+    "componentPath": "../../Proyectos/ProyectoEjemplo/modules/PanelOperaciones/index.jsx",
+    "propsName": "propsPanelOperaciones",
+    "propsPath": "../../Proyectos/ProyectoEjemplo/utils/props.js",
+    "category": "Modulos",
+    "state": "En revisión",
+    "stateColor": "#fb8c00",
+    "endpoint": "-",
+    "methodHttp": "-",
+    "useIn": [
+      "ProyectoEjemplo"
+    ]
+  },
+  {
+    "name": "Pagina de prueba",
+    "componentName": "PageEjemplo",
+    "componentPath": "../../Proyectos/ProyectoEjemplo/pages/PageEjemplo/index.jsx",
+    "propsName": "propsPageEjemplo",
+    "propsPath": "../../Proyectos/ProyectoEjemplo/utils/props.js",
+    "category": "Paginas",
+    "state": "En revisión",
+    "stateColor": "#fb8c00",
+    "endpoint": "-",
+    "methodHttp": "-",
+    "useIn": [
+      "ProyectoEjemplo"
+    ]
+  }
+]

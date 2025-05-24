@@ -3,6 +3,7 @@
   "version": "2.0.0",
   "description": "Core internal server module for UI-LAB. Acts as the brain of the application, handling dynamic updates, project generation, and persistent configuration changes. Not intended for standalone use — fully coupled to the main UI-LAB system.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

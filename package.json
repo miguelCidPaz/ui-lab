@@ -3,6 +3,7 @@
   "version": "2.0.0",
   "description": "A clean React component lab you can fork, extend or embed in any project. No boilerplate, no nonsense.",
   "main": "index.jsx",
+  "type": "module",
   "scripts": {
     "dev": "concurrently \"node ui-core/server/index.js\" \"vite\"",
     "build": "vite build",

@@ -1,6 +1,6 @@
 import { CATEGORIES, STATES } from './generalConfig.js';
 
-const COMPONENT_REGISTRY = [
+export const COMPONENT_REGISTRY = [
     {
         name: "Boton Sumar",
         componentName: 'ButtonPrueba',
@@ -114,4 +114,6 @@ export const ALL_COMPONENTS = COMPONENT_REGISTRY.map(entry => ({
         COMPONENT_CACHE[entry.componentName] = component;
         return component;
     }
+
+    
 }));
