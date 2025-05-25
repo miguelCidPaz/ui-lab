@@ -4,6 +4,9 @@ import { getComponentFromPath } from '../getComponentFromPath';
 export const useActiveComponent = (allComponents) => {
   const [componentData, setComponentData] = useState(null);
 
+  console.log('useActiveComponent', allComponents);
+  
+
   const updateComponentFromURL = () => {
     const comp = getComponentFromPath(window.location.pathname, allComponents);
     setComponentData(comp || null);

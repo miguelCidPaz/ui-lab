@@ -1,7 +1,8 @@
 import styles from './styles.module.css';
 import { CATEGORIES, BASENAME } from '../../config/generalConfig.js';
+import { ProjectSelector } from '../ProjectSelector/index.jsx';
 
-export const HeaderCatalog = ({ navigate, setCatalogo }) => {
+export const HeaderCatalog = ({ navigate, setCatalogo, projects, handleProyectSelected, allCategories }) => {
 
     // Función para establecer el layout y navegar
     const setLayout = (category) => {
@@ -15,7 +16,7 @@ export const HeaderCatalog = ({ navigate, setCatalogo }) => {
             <div className={styles.header_catalog_principal}>
                 <div className={styles.title}>{BASENAME}</div>
                 <div className={styles.menu}>
-                    {categories.map((category) => (
+                    {allCategories.map((category) => (
                         <button
                             className={styles.buttonCatalog}
                             onClick={() => setLayout(category)}
@@ -24,6 +25,10 @@ export const HeaderCatalog = ({ navigate, setCatalogo }) => {
                             {category}
                         </button>
                     ))}
+                </div>
+                <div className={styles.project_selector}>
+                    <span className={styles.project_selector_label}>Proyecto:</span>
+                    <ProjectSelector projects={projects} handleProyectSelected={handleProyectSelected} />
                 </div>
             </div>
         </div>

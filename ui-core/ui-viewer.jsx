@@ -28,7 +28,8 @@ import BodyCatalog from './components/BodyCatalog/index.jsx';
  */
 export default function App() {
     const [catalogo, setCatalogo] = useCatalogRouting(CATEGORIES);
-    const componentData = useActiveComponent(ALL_COMPONENTS);
+    const [proyectSelected, setProyectSelected] = useState(null);
+    const componentData = useActiveComponent(ALL_COMPONENTS, proyectSelected);
     const [showHeader, setShowHeader] = useState(true);
 
     // Aplicar colores base
@@ -43,14 +44,25 @@ export default function App() {
 
     // Determinar si estamos en la vista de un componente o no
     const selectedComponentView = componentData !== null;
+    const allProjects = [...new Set(ALL_COMPONENTS.flatMap(c => c.useIn))];
+    const allCategories = [...new Set(ALL_COMPONENTS.map(c => c.category))];
+
+    const handleProyectSelected = (proyect) => {
+        setProyectSelected(proyect);
+    }
 
     return (
         // Estructura de la aplicacion
         <div>
-            <button className={style.closeButton}  onClick={() => setShowHeader(!showHeader)}>X</button>
-            {showHeader && <HeaderCatalog navigate={handleNavigation} setCatalogo={setCatalogo} />}
+            <button className={style.closeButton} onClick={() => setShowHeader(!showHeader)}>X</button>
+            {showHeader && <HeaderCatalog
+                navigate={handleNavigation}
+                setCatalogo={setCatalogo}
+                projects={allProjects}
+                handleProyectSelected={handleProyectSelected}
+                allCategories={allCategories} />}
             {!selectedComponentView && (
-                <BodyCatalog navigate={handleNavigation} catalogo={ ALL_COMPONENTS.filter(comp => comp.category === catalogo)} />
+                <BodyCatalog navigate={handleNavigation} catalogo={ALL_COMPONENTS.filter(comp => comp.category === catalogo)} />
             )}
             {selectedComponentView && <ComponentCatalog componentData={componentData} />}
         </div>
