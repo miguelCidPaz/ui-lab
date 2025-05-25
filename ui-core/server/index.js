@@ -1,12 +1,14 @@
 import http from 'http';
 //import { handleUploadJson } from './routes/uploadJson.js';
 import { syncComponents } from './scripts/syncComponents.js';
+import { updateComponentRegistry } from './scripts/updateContent.js';
 
 const PORT = 3000;
 
 
 // Ejecutamos sincronización al levantar el backend
 syncComponents();
+updateComponentRegistry();
 
 const server = http.createServer((req, res) => {
   if (req.method === 'POST' && req.url === '/upload-json') {

@@ -30,15 +30,20 @@ export function syncComponents() {
     });
 
     uniqueProjects.forEach(project => {
-        const projectPath = path.resolve(__dirname, `../../../Proyectos/${project}/components.json`);
-        const componentsForProject = minimalComponents.filter(c => c.useIn.includes(project));
+    const projectDirPath = path.resolve(__dirname, `../../../Proyectos/${project}`);
+    const projectFilePath = path.resolve(projectDirPath, 'components.json');
+    const componentsForProject = minimalComponents.filter(c => c.useIn.includes(project));
 
-        if (!fs.existsSync(projectPath)) {
-            fs.mkdirSync(path.dirname(projectPath), { recursive: true });
-            fs.writeFileSync(projectPath, JSON.stringify(componentsForProject, null, 2));
+    // Solo proceder si la carpeta del proyecto EXISTE
+    if (fs.existsSync(projectDirPath)) {
+        if (!fs.existsSync(projectFilePath)) {
+            fs.writeFileSync(projectFilePath, JSON.stringify(componentsForProject, null, 2));
             console.log(`✅ Generado components.json para ${project}`);
         } else {
             console.log(`⚠ ${project} ya tiene components.json, no se sobrescribe.`);
         }
-    });
+    } else {
+        console.warn(`⚠ Carpeta del proyecto no encontrada: ${projectDirPath}. No se generó components.json.`);
+    }
+});
 }
