@@ -17,14 +17,10 @@ export function useDynamicComponent(componentData) {
     async function loadEverything() {
       if (!componentData) return;
 
-      console.log('useDynamicComponent', componentData);
-      
-
       try {
         // Cargar componente dinámicamente
         const module = await import(/* @vite-ignore */componentData.componentPath);
         const resolvedComponent = module[componentData.componentName];
-        console.log('Componente cargado:', componentData.componentPath); 
         
 
         if (isMounted) {

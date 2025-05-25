@@ -4,7 +4,7 @@ const OptionCatalog = ({ component, navigate }) => {
 
     const goComponent = () => {
         const base = component.category.toLowerCase(); // ejemplo: 'components'
-        const slug = encodeURIComponent(component.name);
+        const slug = encodeURIComponent(component.name) + '|' + encodeURIComponent(component.useIn.join(','));
         navigate(`/${base}/${slug}`);
     };
 

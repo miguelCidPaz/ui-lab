@@ -6,7 +6,6 @@ import { useDynamicComponent } from '../../utils/hooks/useDynamicComponent';
 
 export const ComponentCatalog = ({ componentData }) => {
   const { LoadedComponent, LoadedProps } = useDynamicComponent(componentData);
-  console.log(LoadedComponent, LoadedProps);
   
   
   const [screenWidth, setScreenWidth] = useState(() =>

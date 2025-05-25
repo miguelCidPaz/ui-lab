@@ -6,7 +6,7 @@ export const ProjectSelector = ({ projects, handleProyectSelected }) => {
             className={styles.dropdownCatalog}
             onChange={(e) => handleProyectSelected(e.target.value)}
         >
-            <option value={null}>Todos los componentes</option>
+            <option value='null'>Todos los componentes</option>
             {projects.map((project) => (
                 <option value={project} key={project}>
                     {project}

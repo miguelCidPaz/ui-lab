@@ -29,6 +29,19 @@ export const COMPONENT_REGISTRY = [
         useIn: ["ProyectoEjemplo"]
     },
     {
+        name: "Boton Restar",
+        componentName: 'ButtonPrueba',
+        componentPath: '/Proyectos/ProyectoEjemplo/components/ButtonPrueba/index.jsx',
+        propsName: 'propsButtonMenosSolitario',
+        propsPath: '/Proyectos/ProyectoEjemplo/utils/props.js',
+        type: "Boton sin estilos adicionales",
+        state: STATES.completed,
+        category: CATEGORIES.components,
+        endpoint: "-",
+        methodHttp: "-",
+        useIn: ["ProyectoEjemplo2"]
+    },
+    {
         name: "Panel informativo",
         componentName: 'PanelPrueba',
         componentPath: '/Proyectos/ProyectoEjemplo/components/PanelPrueba/index.jsx',
@@ -106,15 +119,18 @@ const COMPONENT_CACHE = {};
 export const ALL_COMPONENTS = COMPONENT_REGISTRY.map(entry => ({
     ...entry,
     loader: async () => {
-        if (COMPONENT_CACHE[entry.componentName]) {
-            return COMPONENT_CACHE[entry.componentName];
+        const projectKey = entry.useIn && entry.useIn.length > 0
+            ? entry.useIn.sort().join('_')
+            : 'general';
+        const cacheKey = `${entry.name}_${projectKey}`;
+
+        if (COMPONENT_CACHE[cacheKey]) {
+            return COMPONENT_CACHE[cacheKey];
         }
 
         const module = await import(/* @vite-ignore */ entry.componentPath);
         const component = module.default || module[entry.componentName];
-        COMPONENT_CACHE[entry.componentName] = component;
+        COMPONENT_CACHE[cacheKey] = component;
         return component;
     }
-
-    
 }));

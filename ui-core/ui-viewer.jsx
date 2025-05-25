@@ -44,12 +44,15 @@ export default function App() {
 
     // Determinar si estamos en la vista de un componente o no
     const selectedComponentView = componentData !== null;
+
     const allProjects = [...new Set(ALL_COMPONENTS.flatMap(c => c.useIn))];
     const allCategories = [...new Set(ALL_COMPONENTS.map(c => c.category))];
 
     const handleProyectSelected = (proyect) => {
+        proyect = proyect === 'null' ? null : proyect;
         setProyectSelected(proyect);
     }
+
 
     return (
         // Estructura de la aplicacion
@@ -62,7 +65,11 @@ export default function App() {
                 handleProyectSelected={handleProyectSelected}
                 allCategories={allCategories} />}
             {!selectedComponentView && (
-                <BodyCatalog navigate={handleNavigation} catalogo={ALL_COMPONENTS.filter(comp => comp.category === catalogo)} />
+                <BodyCatalog navigate={handleNavigation} catalogo={ALL_COMPONENTS.filter(
+                    comp =>
+                        (comp.category === catalogo) &&
+                        (proyectSelected !== null ? comp.useIn.includes(proyectSelected) : true)
+                )} />
             )}
             {selectedComponentView && <ComponentCatalog componentData={componentData} />}
         </div>
