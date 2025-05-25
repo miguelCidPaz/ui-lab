@@ -6,6 +6,8 @@ import { useDynamicComponent } from '../../utils/hooks/useDynamicComponent';
 
 export const ComponentCatalog = ({ componentData }) => {
   const { LoadedComponent, LoadedProps } = useDynamicComponent(componentData);
+  console.log(LoadedComponent, LoadedProps);
+  
   
   const [screenWidth, setScreenWidth] = useState(() =>
     typeof window !== 'undefined' && window.innerWidth > 1100 ? 'desktop' : 'mobile'
@@ -50,7 +52,7 @@ export const ComponentCatalog = ({ componentData }) => {
 
       {!componentData.isPage ? (
         <div className={`${styles.background_catalog_container} ${styles.background_catalog_description}`}>
-          <Info data={componentData} />
+          <Info data={componentData} props={LoadedProps} />
         </div>
       ) : null}
     </div>

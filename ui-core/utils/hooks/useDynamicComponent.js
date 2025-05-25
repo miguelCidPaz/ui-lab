@@ -17,16 +17,22 @@ export function useDynamicComponent(componentData) {
     async function loadEverything() {
       if (!componentData) return;
 
+      console.log('useDynamicComponent', componentData);
+      
+
       try {
         // Cargar componente dinámicamente
-        const module = await import(/* @vite-ignore */ componentData.componentPath);
-        const resolvedComponent = module.default || module[componentData.componentName];
+        const module = await import(/* @vite-ignore */componentData.componentPath);
+        const resolvedComponent = module[componentData.componentName];
+        console.log('Componente cargado:', componentData.componentPath); 
+        
+
         if (isMounted) {
           setLoadedComponent(() => resolvedComponent);
         }
 
         // Cargar props dinámicamente
-        const propsModule = await import(/* @vite-ignore */ componentData.propsPath);
+        const propsModule = await import(/* @vite-ignore */componentData.propsPath);
         const resolvedProps = propsModule[componentData.propsName];
         if (isMounted) {
           setLoadedProps(() => resolvedProps);
