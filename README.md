@@ -1,5 +1,21 @@
 # UI Lab – Laboratorio para construir, probar y mostrar componentes React
 
+## ✅ Estado actual del proyecto
+
+Este proyecto está en fase **beta evolutiva**, con el siguiente avance:
+
+- [x] Visualización de componentes por categorías  
+- [x] Integración automática de proyectos UI-LAB  
+- [x] Render dinámico con props mockeados  
+- [x] Navegación simple y adaptable (`history` / `next` / `react-router`)  
+- [ ] Modificación de props en caliente desde la interfaz  
+- [ ] Fusión y reutilización de componentes entre proyectos  
+- [ ] Mejoras en personalización avanzada (estilos, colores, fuentes)  
+- [ ] Documentación extendida y casos de uso avanzados  
+
+> **Nota:** Este checklist refleja el estado actual del desarrollo y se actualizará conforme avance.  
+Si quieres aportar ideas, sugerencias o mejoras, ¡estás invitado!
+
 **UI Lab** es un entorno ligero, limpio y desacoplado para visualizar, probar y documentar tus componentes React.
 
 Nació como una herramienta interna para trabajar con componentes de forma rápida y controlada, sin montar una app completa ni depender de infraestructura externa.
