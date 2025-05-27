@@ -8,9 +8,10 @@ Este proyecto está en fase **beta evolutiva**, con el siguiente avance:
 - [x] Integración automática de proyectos UI-LAB  
 - [x] Render dinámico con props mockeados  
 - [x] Navegación simple y adaptable (`history` / `next` / `react-router`)  
-- [ ] Modificación de props en caliente desde la interfaz  
+- [x] Modificación de props en caliente desde la interfaz  
 - [ ] Fusión y reutilización de componentes entre proyectos  
-- [ ] Mejoras en personalización avanzada (estilos, colores, fuentes)  
+- [ ] Mejoras en personalización avanzada (estilos, colores, fuentes)   
+- [ ] Doble idioma eng /esp  
 - [ ] Documentación extendida y casos de uso avanzados  
 
 > **Nota:** Este checklist refleja el estado actual del desarrollo y se actualizará conforme avance.  
