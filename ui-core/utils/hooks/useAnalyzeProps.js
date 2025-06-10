@@ -14,7 +14,7 @@ export function useAnalyzeProps() {
             if (!Array.isArray(result)) {
                 throw new Error('Expected array but got: ' + JSON.stringify(result));
             }
-            setData([...result]); // 🔥 correcto para array
+            setData([...result]);
         } catch (err) {
             setError(err);
         } finally {

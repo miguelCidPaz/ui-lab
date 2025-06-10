@@ -68,6 +68,12 @@ export const OptionCatalog = ({ component, navigate }) => {
                 </button>
                 <button
                     className={styles.option_button}
+                    onClick={console.log('No implementado')}
+                >
+                    Copiar componente
+                </button>
+                <button
+                    className={styles.option_button}
                     onClick={handleAnalyzeProps}
                     disabled={loading}
                 >
