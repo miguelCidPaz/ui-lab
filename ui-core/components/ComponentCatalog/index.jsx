@@ -5,7 +5,7 @@ import { NotFoundCatalog } from '../NotFoundCatalog';
 import { useDynamicComponent } from '../../utils/hooks/useDynamicComponent';
 
 export const ComponentCatalog = ({ componentData }) => {
-  const { LoadedComponent, LoadedProps } = useDynamicComponent(componentData);
+  const { LoadedComponent, LoadedProps, loadError } = useDynamicComponent(componentData);
   
   
   const [screenWidth, setScreenWidth] = useState(() =>
@@ -22,6 +22,10 @@ export const ComponentCatalog = ({ componentData }) => {
 
   if (!componentData) {
     return <NotFoundCatalog />;
+  }
+
+  if (loadError) {
+    return <div>Error al cargar: {loadError}</div>;
   }
 
   if (!LoadedComponent || !LoadedProps) {

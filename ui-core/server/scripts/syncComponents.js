@@ -2,7 +2,6 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { COMPONENT_REGISTRY } from '../../config/content.js';
-import { type } from 'os';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -33,12 +32,8 @@ export function syncComponents() {
         const projectPath = path.resolve(__dirname, `../../../Proyectos/${project}/components.json`);
         const componentsForProject = minimalComponents.filter(c => c.useIn.includes(project));
 
-        if (!fs.existsSync(projectPath)) {
-            fs.mkdirSync(path.dirname(projectPath), { recursive: true });
-            fs.writeFileSync(projectPath, JSON.stringify(componentsForProject, null, 2));
-            console.log(`✅ Generado components.json para ${project}`);
-        } else {
-            console.log(`⚠ ${project} ya tiene components.json, no se sobrescribe.`);
-        }
+        fs.mkdirSync(path.dirname(projectPath), { recursive: true });
+        fs.writeFileSync(projectPath, JSON.stringify(componentsForProject, null, 2));
+        console.log(`✅ Sincronizado components.json para ${project}`);
     });
 }

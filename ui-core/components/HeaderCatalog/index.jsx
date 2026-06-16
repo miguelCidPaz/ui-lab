@@ -6,7 +6,7 @@ export const HeaderCatalog = ({ navigate, setCatalogo, projects, handleProyectSe
 
     // Función para establecer el layout y navegar
     const setLayout = (category) => {
-        navigate(encodeURIComponent(category.toLowerCase(category))); // establece el layout
+        navigate(encodeURIComponent(category.toLowerCase())); // establece el layout
     };
 
     const categories = Object.entries(CATEGORIES).map(([_, value]) => value);

@@ -10,6 +10,7 @@ import { useEffect, useState } from 'react';
 export function useDynamicComponent(componentData) {
   const [LoadedComponent, setLoadedComponent] = useState(null);
   const [LoadedProps, setLoadedProps] = useState(null);
+  const [loadError, setLoadError] = useState(null);
 
   useEffect(() => {
     let isMounted = true;
@@ -17,24 +18,22 @@ export function useDynamicComponent(componentData) {
     async function loadEverything() {
       if (!componentData) return;
 
+      setLoadError(null);
+
       try {
-        // Cargar componente dinámicamente
         const module = await import(/* @vite-ignore */componentData.componentPath);
         const resolvedComponent = module[componentData.componentName];
-        
 
-        if (isMounted) {
-          setLoadedComponent(() => resolvedComponent);
-        }
+        if (!resolvedComponent) throw new Error(`Export "${componentData.componentName}" no encontrado en ${componentData.componentPath}`);
 
-        // Cargar props dinámicamente
+        if (isMounted) setLoadedComponent(() => resolvedComponent);
+
         const propsModule = await import(/* @vite-ignore */componentData.propsPath);
         const resolvedProps = propsModule[componentData.propsName];
-        if (isMounted) {
-          setLoadedProps(() => resolvedProps);
-        }
+        if (isMounted) setLoadedProps(() => resolvedProps);
       } catch (err) {
         console.error('Error cargando componente o props dinámicamente:', err);
+        if (isMounted) setLoadError(err.message);
       }
     }
 
@@ -45,5 +44,5 @@ export function useDynamicComponent(componentData) {
     };
   }, [componentData]);
 
-  return { LoadedComponent, LoadedProps };
+  return { LoadedComponent, LoadedProps, loadError };
 }
