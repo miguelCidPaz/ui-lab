@@ -1,0 +1,27 @@
+.background_panel {
+  background-color: #f5f7fa;
+  border: 2px solid #e0e6ed;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.background_panel:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.text {
+  font-size: 2.5rem;
+  color: #0070f3;
+  font-weight: bold;
+  margin: 0;
+}

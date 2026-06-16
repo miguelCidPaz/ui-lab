@@ -1,0 +1,32 @@
+.option_input {
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 14px;
+    color: var(--ui-catalog-text-color);
+    background-color: var(--ui-catalog-base-color);
+    border: 1px solid var(--ui-catalog-chip-border, #ffffff20);
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.option_input:focus {
+    outline: none;
+    border-color: var(--ui-catalog-buttons-color);
+    box-shadow: 0 0 4px var(--ui-catalog-buttons-color);
+}
+
+.option_label {
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 4px;
+    color: var(--ui-catalog-text-color);
+    text-transform: capitalize;
+}
+
+.option_form_group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 12px;
+}

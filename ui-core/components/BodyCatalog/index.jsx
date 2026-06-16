@@ -1,4 +1,4 @@
-import OptionCatalog from "../OptionCatalog"
+import {OptionCatalog} from "../OptionCatalog"
 import styles from './styles.module.css';
 
 const BodyCatalog = ({navigate, catalogo}) => {

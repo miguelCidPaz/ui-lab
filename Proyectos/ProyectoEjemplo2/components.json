@@ -5,6 +5,7 @@
     "componentPath": "/Proyectos/ProyectoEjemplo2/components/ButtonPrueba/index.jsx",
     "propsName": "propsButtonMasSolitario",
     "propsPath": "/Proyectos/ProyectoEjemplo2/utils/props.js",
+    "type": "Boton sin estilos adicionales",
     "category": "Componentes",
     "state": "Finalizado",
     "stateColor": "#43a047",
@@ -20,6 +21,7 @@
     "componentPath": "/Proyectos/ProyectoEjemplo2/components/ButtonPrueba/index.jsx",
     "propsName": "propsButtonMenosSolitario",
     "propsPath": "/Proyectos/ProyectoEjemplo2/utils/props.js",
+    "type": "Boton sin estilos adicionales",
     "category": "Componentes",
     "state": "Finalizado",
     "stateColor": "#43a047",
@@ -35,6 +37,7 @@
     "componentPath": "/Proyectos/ProyectoEjemplo2/components/PanelPrueba/index.jsx",
     "propsName": "propsPanelSolitario",
     "propsPath": "/Proyectos/ProyectoEjemplo2/utils/props.js",
+    "type": "Panel sin estilos adicionales",
     "category": "Componentes",
     "state": "Finalizado",
     "stateColor": "#43a047",
@@ -50,10 +53,12 @@
     "componentPath": "/Proyectos/ProyectoEjemplo2/components/EmojiDisplay/index.jsx",
     "propsName": "propsEmojiDisplay",
     "propsPath": "/Proyectos/ProyectoEjemplo2/utils/props.js",
+    "type": "Panel que muestra un emoji segun el valor que le pasemos",
     "category": "Componentes",
     "state": "En desarrollo",
     "stateColor": "#e53935",
     "endpoint": "-",
+    "methodHttp": "-",
     "useIn": [
       "ProyectoEjemplo2"
     ]
@@ -64,10 +69,12 @@
     "componentPath": "/Proyectos/ProyectoEjemplo2/modules/PanelEmoji/index.jsx",
     "propsName": "propsPanelEmoji",
     "propsPath": "/Proyectos/ProyectoEjemplo2/utils/props.js",
+    "type": "Panel que muestra un emoji junto a un panel informativo",
     "category": "Modulos",
     "state": "En revisión",
     "stateColor": "#fb8c00",
     "endpoint": "-",
+    "methodHttp": "-",
     "useIn": [
       "ProyectoEjemplo2"
     ]
@@ -78,6 +85,7 @@
     "componentPath": "/Proyectos/ProyectoEjemplo2/modules/PanelOperaciones/index.jsx",
     "propsName": "propsPanelOperaciones",
     "propsPath": "/Proyectos/ProyectoEjemplo2/utils/props.js",
+    "type": "Panel con informativo y botones sumar/restar",
     "category": "Modulos",
     "state": "En revisión",
     "stateColor": "#fb8c00",
@@ -93,6 +101,7 @@
     "componentPath": "/Proyectos/ProyectoEjemplo2/pages/PageEjemplo/index.jsx",
     "propsName": "propsPageEjemplo",
     "propsPath": "/Proyectos/ProyectoEjemplo2/utils/props.js",
+    "type": "Pagina que muestra los modulos de operaciones y emoji",
     "category": "Paginas",
     "state": "En revisión",
     "stateColor": "#fb8c00",

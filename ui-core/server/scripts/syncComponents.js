@@ -15,6 +15,7 @@ export function syncComponents() {
         componentPath: c.componentPath,
         propsName: c.propsName,
         propsPath: c.propsPath,
+        type: c.type || '',
         category: typeof c.category === 'string' ? c.category : String(c.category),
         state: typeof c.state.label === 'string' ? c.state.label : String(c.state.label),
         stateColor: typeof c.state.color === 'string' ? c.state.color : String(c.state.color),
@@ -29,11 +30,15 @@ export function syncComponents() {
     });
 
     uniqueProjects.forEach(project => {
-        const projectPath = path.resolve(__dirname, `../../../Proyectos/${project}/components.json`);
+        const projectDirPath = path.resolve(__dirname, `../../../Proyectos/${project}`);
+        const projectFilePath = path.resolve(projectDirPath, 'components.json');
         const componentsForProject = minimalComponents.filter(c => c.useIn.includes(project));
 
-        fs.mkdirSync(path.dirname(projectPath), { recursive: true });
-        fs.writeFileSync(projectPath, JSON.stringify(componentsForProject, null, 2));
-        console.log(`✅ Sincronizado components.json para ${project}`);
+        if (fs.existsSync(projectDirPath)) {
+            fs.writeFileSync(projectFilePath, JSON.stringify(componentsForProject, null, 2));
+            console.log(`✅ Sincronizado components.json para ${project}`);
+        } else {
+            console.warn(`⚠ Carpeta del proyecto no encontrada: ${projectDirPath}. No se generó components.json.`);
+        }
     });
 }

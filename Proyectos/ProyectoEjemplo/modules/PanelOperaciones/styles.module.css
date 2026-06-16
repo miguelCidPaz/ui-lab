@@ -1,0 +1,45 @@
+.background_panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  background-color: #ffffff;
+  border: 2px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  max-width: 400px;
+  margin: 2rem auto;
+}
+
+.number_panel {
+  width: 100%;
+}
+
+.background_panel_buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn_panel {
+  background-color: #f3f4f6;
+  color: #333;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  transition: all 0.2s ease;
+}
+
+.btn_panel:hover {
+  background-color: #e5e7eb;
+  border-color: #a1a1aa;
+  transform: translateY(-1px);
+}
+
+.btn_panel:active {
+  transform: scale(0.98);
+  background-color: #d1d5db;
+}
