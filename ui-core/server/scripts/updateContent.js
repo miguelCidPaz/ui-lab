@@ -34,6 +34,7 @@ export function updateComponentRegistry() {
   componentPath: ${JSON.stringify(c.componentPath)},
   propsName: ${JSON.stringify(c.propsName)},
   propsPath: ${JSON.stringify(c.propsPath)},
+  type: ${JSON.stringify(c.type || '')},
   category: ${JSON.stringify(c.category)},
   state: { label: ${JSON.stringify(c.state)}, color: ${JSON.stringify(c.stateColor)} },
   endpoint: ${JSON.stringify(c.endpoint)},

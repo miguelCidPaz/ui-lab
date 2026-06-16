@@ -44,6 +44,7 @@ vi.mock('../../config/content.js', () => ({
 describe('syncComponents', () => {
     beforeEach(() => {
         vi.clearAllMocks();
+        mockFs.existsSync.mockReturnValue(true);
         mockFs.mkdirSync.mockImplementation(() => {});
         mockFs.writeFileSync.mockImplementation(() => {});
     });
@@ -72,11 +73,18 @@ describe('syncComponents', () => {
         expect(parsed[0].name).toBe('Test Button');
     });
 
-    it('always creates directory before writing', async () => {
+    it('checks project directory exists before writing', async () => {
         const { syncComponents } = await import('../../server/scripts/syncComponents.js');
         syncComponents();
-        expect(mockFs.mkdirSync).toHaveBeenCalledTimes(2);
-        expect(mockFs.mkdirSync.mock.calls[0][1]).toEqual({ recursive: true });
+        expect(mockFs.existsSync).toHaveBeenCalledTimes(2);
+        expect(mockFs.writeFileSync).toHaveBeenCalledTimes(2);
+    });
+
+    it('skips writing when project directory does not exist', async () => {
+        mockFs.existsSync.mockReturnValue(false);
+        const { syncComponents } = await import('../../server/scripts/syncComponents.js');
+        syncComponents();
+        expect(mockFs.writeFileSync).not.toHaveBeenCalled();
     });
 
     it('resolves state to string label', async () => {

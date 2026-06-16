@@ -1,6 +1,6 @@
 import { describe, it, expect, vi } from 'vitest';
 import { render, screen, fireEvent } from '@testing-library/react';
-import OptionCatalog from '../../components/OptionCatalog';
+import { OptionCatalog } from '../../components/OptionCatalog';
 
 const mockComponent = {
     name: 'Boton Test',

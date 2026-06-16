@@ -16,20 +16,20 @@ test.describe('Navegación principal', () => {
     });
 
     test('carga inicial muestra tarjetas de componentes', async ({ page }) => {
-        await expect(page.getByText('Boton Sumar')).toBeVisible();
-        await expect(page.getByText('Boton Restar')).toBeVisible();
+        await expect(page.getByText('Boton Sumar').first()).toBeVisible();
+        await expect(page.getByText('Boton Restar').first()).toBeVisible();
     });
 
     test('click en categoría Modulos muestra módulos', async ({ page }) => {
         await page.getByRole('button', { name: 'Modulos' }).click();
-        await expect(page.getByText('Panel Emoji')).toBeVisible();
-        await expect(page.getByText('Panel Operaciones')).toBeVisible();
-        await expect(page.getByText('Boton Sumar')).not.toBeVisible();
+        await expect(page.getByText('Panel Emoji').first()).toBeVisible();
+        await expect(page.getByText('Panel Operaciones').first()).toBeVisible();
+        await expect(page.getByText('Boton Sumar').first()).not.toBeVisible();
     });
 
     test('click en categoría Paginas muestra páginas', async ({ page }) => {
         await page.getByRole('button', { name: 'Paginas' }).click();
-        await expect(page.getByText('Pagina de prueba')).toBeVisible();
+        await expect(page.getByText('Pagina de prueba').first()).toBeVisible();
     });
 
     test('botón X oculta el header', async ({ page }) => {

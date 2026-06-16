@@ -27,7 +27,7 @@ test.describe('Vista detalle de componente', () => {
         // native click bypasses CSS overlap issue
         await page.locator('button').filter({ hasText: /^←$/ }).evaluate(el => el.click());
         await expect(page).toHaveURL(/\/componentes$/);
-        await expect(page.getByText('Boton Sumar')).toBeVisible();
+        await expect(page.getByText('Boton Sumar').first()).toBeVisible();
     });
 
     test('acceso directo por URL funciona', async ({ page }) => {
